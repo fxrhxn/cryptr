@@ -1,0 +1,14 @@
+
+
+http = require('http')
+
+app = require('../app.coffee')
+
+
+port = parseInt(process.env.PORT, 10) || 8000
+
+app.set('port', port)
+
+server = http.createServer(app)
+
+server.listen(port)
